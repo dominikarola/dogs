@@ -1,4 +1,4 @@
-import { IsString } from "class-validator";
+import { IsNumber, IsString } from "class-validator";
 
 export class EditDogDto{
     @IsString()
@@ -7,12 +7,22 @@ export class EditDogDto{
     description: string;
     @IsString()
     personality: string;
-    @IsString()
-    lifespan: string;
-    @IsString()
-    weight: string;
+    @IsNumber()
+    minimumLifespan: number;
+    @IsNumber()
+    maximumLifespan: number;
+    @IsNumber()
+    miniummWeight: number;
+    @IsNumber()
+    maximumWeight: number;
+    @IsNumber()
+    minimumHeight: number;
+    @IsNumber()
+    maximumHeight: number;
     @IsString()
     color: string;
+    @IsString()
+    origin: string;
     @IsString()
     photoUrl: string;
 }

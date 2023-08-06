@@ -1,4 +1,4 @@
-import { IsArray, IsString } from "class-validator";
+import { IsArray, IsNumber, IsString } from "class-validator";
 
 export class CreateDogDto{
     @IsString()
@@ -7,12 +7,22 @@ export class CreateDogDto{
     description: string;
     @IsString()
     personality: string;
-    @IsString()
-    lifespan: string;
-    @IsString()
-    weight: string;
+    @IsNumber()
+    minimumLifespan: number;
+    @IsNumber()
+    maximumLifespan: number;
+    @IsNumber()
+    minimumWeight: number;
+    @IsNumber()
+    maximumWeight: number;
+    @IsNumber()
+    minimumHeight: number;
+    @IsNumber()
+    maximumHeight: number;
     @IsString()
     color: string;
+    @IsString()
+    origin: string;
     @IsString()
     photoUrl: string;
 }

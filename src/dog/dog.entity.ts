@@ -15,13 +15,28 @@ export class Dog{
     personality: string;
 
     @Column()
-    lifespan: string;
+    minimumLifespan: number;
+
+    @Column()
+    maximumLifespan: number;
     
     @Column()
-    weight: string;
+    minimumWeight: number;
+
+    @Column()
+    maximumWeight: number;
+    
+    @Column()
+    minimumHeight: number;
+
+    @Column()
+    maximumHeight: number;
 
     @Column()
     color: string;
+
+    @Column()
+    origin: string;
 
     @Column({ nullable: true }) // Dodajemy opcję `nullable: true` dla kolumny `photoUrl`
     photoUrl: string | null;

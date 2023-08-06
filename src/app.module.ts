@@ -12,7 +12,8 @@ import { DogModule } from './dog/dog.module';
     type: 'sqlite',
     database: 'db.sqlite',
     synchronize: true,
-    entities: ['**/*.entity.js']
+    entities: ['**/*.entity.js'],
+    autoLoadEntities: true
   })
 ],
   controllers: [AppController],
