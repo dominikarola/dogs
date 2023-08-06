@@ -7,7 +7,8 @@ import { SearchDogDto } from './dtos/search-dog.dto';
 @Injectable()
 export class DogService {
     constructor(
-        @InjectRepository(Dog) private repo: Repository<Dog>){}
+    @InjectRepository(Dog) private repo: Repository<Dog>){}
+
     getAll(){
         return this.repo.find();
     }
@@ -32,7 +33,9 @@ export class DogService {
     }
     async edit(id: number, breed: string, description: string, personality: string, 
         minimumLifespan: number, maximumLifespan: number, minimumWeight: number, maximumWeight: number, minimumHeight: number, maximumHeight: number, color: string, origin: string, photoUrl: string){
+        
         const dog = await this.repo.findOne({where: {id: id}});
+        
         dog.breed = breed;
         dog.description = description;
         dog.personality = personality;
