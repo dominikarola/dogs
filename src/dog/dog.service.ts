@@ -83,7 +83,7 @@ export class DogService {
         if(query.origin){
             where.origin = Like(`%${query.origin}%`);
         }
-            console.log(where);
+
         return this.repo.find({ where });
     }
 }
