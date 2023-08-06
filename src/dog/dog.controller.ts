@@ -43,6 +43,7 @@ export class DogController {
     @Get('search/filter')
     searchDog(@Query() query: SearchDogDto){
         return this.dogService.search(query);
+        console.log("test");
     }   
 }
 
